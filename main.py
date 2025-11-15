@@ -8,7 +8,7 @@ import asyncio
 app = FastAPI()
 
 # Webhook URL (Vercel deploy linkini qo‘yasiz)
-WEBHOOK_URL = "https://YOUR_PROJECT_NAME.vercel.app/api/webhook"
+WEBHOOK_URL = "https://fastapi-aiogram2-webhook-uz.vercel.app/api/webhook"
 
 
 @app.on_event("startup")
@@ -28,4 +28,5 @@ async def telegram_webhook(request: Request):
 
 @app.get("/")
 async def home():
+
     return {"status": "Bot is running"}
